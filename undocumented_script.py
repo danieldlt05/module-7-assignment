@@ -2,14 +2,8 @@ def multiply_nums(nums_list):
     return [num * 2 if num % 2 == 0 else num * 3 for num in nums_list]
 
 
-def do_string_stuff(list_of_strings):
-    x = ""
-    for s in list_of_strings:
-        if len(s) > 5:
-            x += s.upper() + " "
-        else:
-            x += s.lower() + " "
-    return x.strip()
+def capitalize_fruits(fruits):
+    return " ".join(s.upper() if len(s) > 5 else s.lower() for s in fruits)
 
 
 def main():
@@ -17,7 +11,7 @@ def main():
     list2 = ["apple", "banana", "kiwi", "grapefruit", "cherry"]
 
     processed_nums = multiply_nums(list1)
-    processed_strings = do_string_stuff(list2)
+    processed_strings = capitalize_fruits(list2)
 
     print("Processed Numbers:", processed_nums)
     print("Processed Strings:", processed_strings)
@@ -25,4 +19,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
