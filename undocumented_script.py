@@ -1,11 +1,5 @@
-def do_math_stuff(list_of_nums):
-    result = []
-    for num in list_of_nums:
-        if num % 2 == 0:
-            result.append(num * 2)
-        else:
-            result.append(num * 3)
-    return result
+def multiply_nums(nums_list):
+    return [num * 2 if num % 2 == 0 else num * 3 for num in nums_list]
 
 
 def do_string_stuff(list_of_strings):
@@ -22,7 +16,7 @@ def main():
     list1 = [1, 2, 3, 4, 5, 6, 7]
     list2 = ["apple", "banana", "kiwi", "grapefruit", "cherry"]
 
-    processed_nums = do_math_stuff(list1)
+    processed_nums = multiply_nums(list1)
     processed_strings = do_string_stuff(list2)
 
     print("Processed Numbers:", processed_nums)
@@ -31,3 +25,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
